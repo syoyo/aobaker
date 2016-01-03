@@ -5,7 +5,7 @@ This little public domain tool does the following:
 - Generates reasonable UV's for an arbitrary mesh.
 - Creates a texture representing ambient occlusion.
 
-The first bullet uses Thekla's parameterization code; the second bullet uses Intel's embree library for raytracing.
+The first bullet uses Thekla's parameterization code; the second bullet uses NanoRT library for raytracing.
 
 ![](https://github.com/prideout/aobaker/blob/master/suzanne.png)
 
@@ -41,8 +41,7 @@ $ aobaker --help
 Homebrew is the easiest way to install the dependencies:
 
 ```bash
-$ cp ~/git/aobaker/embree.rb /usr/local/Library/Formula
-$ brew install embree tbb cmake
+$ brew install cmake
 ```
 
 This is optional, but you might want to use a compiler that supports OpenMP, which is a bit tricky if you've already got clang installed.  Here's how I did it:
